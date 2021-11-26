@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Drupal Training </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">Intoduction </a></li>
+        <li><a class="active" href="themedevelopment.html">Theme Development</a></li>
+        <li><a href="moduledevelopment.html">Module Development</a></li>
+    </ul>
+    <div class="container">
+        <h1>Part 2:Theme Development</h1>
+
+        <h3>Introduction </h3>
+        <iframe id="32" src="https://player.vimeo.com/video/645996666" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>prerequisites</h3>
+        <iframe id="33" src="https://player.vimeo.com/video/645996842" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>What Are Themes</h3>
+        <iframe id="34" src="https://player.vimeo.com/video/645997885" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+
+        <h3>Create Your First Theme</h3>
+        <div class="flex-box">
+            <iframe id="35" src="https://player.vimeo.com/video/645999076" width="640" height="564" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="notes">
+                <p>The <em>ThemeName.info.yml </em> new requirments needs to be in the following form: </p>
+                <div class="code">
+                    <p>name: ThemeName<br>
+                        discription: 'ThemeDiscription' <br>
+                        type: theme <br>
+                        core_version_requirement: ^8 || ^9 <br>
+                        base theme: stable9 <br>
+
+                    </p>
+                </div>
+                <a href="https://www.drupal.org/docs/theming-drupal/defining-a-theme-with-an-infoyml-file">
+                    Reference</a>
+            </div>
+        </div>
+
+        <h3>Regions, Blocks & Debugging</h3>
+        <div class="flex-box">
+            <iframe id="36" src="https://player.vimeo.com/video/646000200" width="640" height="564" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="notes">
+                <p>Note: <br>DO NOT CREATE the <em>services.yml</em> file using the
+                    cmd or using the sudo command if you are working on the AWS instance. This is because they will
+                    be created with the wrong permissions and you will no longer be able to edit them.
+                    Instead use the editor to create files.
+                </p>
+                <p>
+                <h4>Twig Template Files</h4>
+                Files end in <em>.html.twig</em>
+                <ul>
+                    <li>Supply the markup that renders what is seen in browsers</li>
+                    <li>Contain mix of HTML 5 syntax and Twig syntax</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <h3>Add Custom CSS</h3>
+        <div class="flex-box">
+            <iframe id="37" src="https://player.vimeo.com/video/646004520" width="640" height="564" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="notes">
+                <p>
+                <h4>ATTENTION</h4>
+                Drupal has default regions that it uses if you do not declare any
+                custom regions in <em>.info.yml</em> <br>
+                Declare ONE custom region, you need to declare all regions.
+                </p>
+            </div>
+        </div>
+        <div class="bignotes">
+            <h4>Twig templates render from most specific to least specific</h4>
+            <p> field.html.twig <br>
+                node.html.twig <br>
+                region.html.twig <br>
+                page.html.twig <br>
+                html.html.twig <br>
+                There are a lot more than these visit <a href="">this site</a> for more information
+            </p>
+            <h4>Some of the main twig Templates usages</h4>
+            <em>html.html.twig</em>
+            <ul>
+                <li>Declares head and body</li>
+                <li>HTML and Twig syntax</li>
+                <li>Declares document type</li>
+            </ul>
+
+            <em>page.html.twig</em>
+            <ul>
+                <li>Implement regions</li>
+                <li>Add div containers/classes</li>
+                <li>Declares document type</li>
+            </ul>
+
+        </div>
+
+        <h3>Add External Libraries</h3>
+        <iframe id="38" src="https://player.vimeo.com/video/646005409" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Add Basic Styles</h3>
+        <iframe id="39" src="https://player.vimeo.com/video/646006571" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Create a Main Page</h3>
+        <iframe id="40" src="https://player.vimeo.com/video/646007609" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Style the Header</h3>
+        <iframe id="41" src="https://player.vimeo.com/video/646008412" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Style the Navigation</h3>
+        <iframe id="42" src="https://player.vimeo.com/video/646011577" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Using Partials</h3>
+        <iframe id="43" src="https://player.vimeo.com/video/646013510" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>More Partials and Content</h3>
+        <iframe id="44" src="https://player.vimeo.com/video/646014877" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Adding Styles to Views</h3>
+        <iframe id="45" src="https://player.vimeo.com/video/646016394" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+        <h3>Conclusion</h3>
+        <iframe id="46" src="https://player.vimeo.com/video/646017562" width="640" height="564" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <ul class="sidebar">
+        <li><a href="#32">Introduction</a></li>
+        <li><a href="#33">Prerequisite</a></li>
+        <li><a href="#34">What Are Themes</a></li>
+        <li><a href="#35">Create Your First Theme</a></li>
+        <li><a href="#36">Regions, Blocks & Debugging</a></li>
+        <li><a href="#37">Add Custom CSS</a></li>
+        <li><a href="#38">Add External Libraries</a></li>
+        <li><a href="#39">Add Basic Styles</a></li>
+        <li><a href="#40">Create a Main Page</a></li>
+        <li><a href="#41">Style the Header</a></li>
+        <li><a href="#42">Style the Navigation</a></li>
+        <li><a href="#43">Using Partials</a></li>
+        <li><a href="#44">More Partials and Content</a></li>
+        <li><a href="#45">Adding Styles to Views</a></li>
+        <li><a href="#46">Conclusion</a></li>
+
+
+    </ul>
+
+</body>
+
+</html>
